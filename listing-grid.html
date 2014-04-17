@@ -1,0 +1,1101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Venues</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
+      <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">  
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- Custom styles for this template -->        
+    
+  
+    
+     <style>
+         .checkbox-gidepage{padding-left: 0 !important;}
+         .list-grid-details-b{font-family: 'robotobold'}
+         .approx2{margin-top: 3px;}        
+         .grid-btn{border-radius:15px 0 0px 15px;background: url(images/locate-btno.jpg);border:1px solid #ff6600;width: 100px}
+         .grid-btn:hover{background: #ff6600;}
+         .map-btn{border-radius:0px 15px 15px 0px;background:url(images/search-button-inactive.png);border:1px solid #ccc;width: 100px;background-position: -3px;width: 100px}
+         .map-btn:hover{background: #ff6600;color:#fff !important;}
+         .img_top{vertical-align:-2px;}
+         .list-search-btn {background:url(images/search-button-active.png);height: 42px;width:42px;position: absolute;right: 20px;top:2px;
+           color: #fff !important;font-size: 23px;} 
+         .listing-grid-main{padding: 0;}
+        .listing-grid-main>ul{overflow-y: scroll;overflow-x: hidden; height: auto; min-height: 100px; max-height: 550px;} 
+         
+            #style-5::-webkit-scrollbar-track{background-color:#eeede6;border-radius:5px;}
+            #style-5::-webkit-scrollbar{width:8px;background-color:#eeede6;}
+            #style-5::-webkit-scrollbar-thumb{background-color:#eeede6;border-radius:5px;}
+    </style>    
+    
+    
+</head>
+<!-- NAVBAR
+================================================== -->
+
+<body>
+    <div class="container-fluid menu-main navbar-fixed-top">
+  <div class="container">
+  <nav class="navbar navbar-default  top-nav no_border" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" style=" border-right:1px solid #ccc; border-left:1px solid #ccc" data-toggle="dropdown"> Hyderabad <b class="caret"></b></a>
+        <ul class="dropdown-menu locations-main dropdown_grid">
+        <div class="container"> <!--1st country-->   
+  <div class="row">
+    <div class="col-lg-8">
+    <div class="col-md-11 locations-head-wrap"><img src="images/india.png">India( Top Cities ) </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Hyderabad</a></li>
+          <li><a href="#">Bangalore</a></li>
+          <li><a href="#">Jaipur</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Kolkata</a></li>
+          <li><a href="#">Chandigarh</a></li>
+          <li><a href="#">Punjab</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">New Delhi</a></li>
+          <li><a href="#">Lucknow</a></li>
+          <li><a href="#">Secunderabad</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Chennai</a></li>
+          <li><a href="#">Vizag</a></li>
+          <li class="seemore"><a data-toggle="modal" href="#myModal" >+ See more</a></li>
+        </ul>
+      </div>  
+    </div>
+  </div>
+      </div><!--1st country-->
+      
+      
+      <div class="container"> <!--2nd country-->   
+  <div class="row">
+    <div class="col-lg-8">
+    <div class="col-md-11 locations-head-wrap"><img src="images/india.png">India( Top Cities ) </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Hyderabad</a></li>
+          <li><a href="#">Bangalore</a></li>
+          <li><a href="#">Jaipur</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Kolkata</a></li>
+          <li><a href="#">Chandigarh</a></li>
+          <li><a href="#">Punjab</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">New Delhi</a></li>
+          <li><a href="#">Lucknow</a></li>
+          <li><a href="#">Secunderabad</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Chennai</a></li>
+          <li><a href="#">Vizag</a></li>
+          <li class="seemore"><a data-toggle="modal" href="#myModal">+ See more</a></li>
+        </ul>
+      </div>  
+    </div>
+  </div>
+      </div><!--2nd country-->
+      
+      
+      <div class="container"> <!--3rd country-->   
+  <div class="row">
+    <div class="col-lg-8">
+    <div class="col-md-11 locations-head-wrap"><img src="images/india.png">India( Top Cities ) </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Hyderabad</a></li>
+          <li><a href="#">Bangalore</a></li>
+          <li><a href="#">Jaipur</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Kolkata</a></li>
+          <li><a href="#">Chandigarh</a></li>
+          <li><a href="#">Punjab</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">New Delhi</a></li>
+          <li><a href="#">Lucknow</a></li>
+          <li><a href="#">Secunderabad</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Chennai</a></li>
+          <li><a href="#">Vizag</a></li>
+          <li class="seemore"><a data-toggle="modal" href="#myModal">+ See more</a></li>
+        </ul>
+      </div>  
+    </div>
+  </div>
+      </div><!--3rd country-->
+      
+        </ul>
+      </li>
+        
+       <li class="active"><a href="#" style=" border-right:1px solid #ccc;"> Find a Venue</a></li>
+      <li><a href="#"><div class="req-quote-btn">Request a Quotation</div></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" style="display:none;">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="float:left;">
+             <img src="images/user.jpg" width="32" height="32" class="user-image-profile"> &nbsp; Snehanjan S.</a>
+                        <ul class="dropdown-menu dropdown-userprofile">
+                             <img src="images/pro.png" class="arrow-profile">
+                            <li><a href="setting.html">Settings</a></li>
+                            <li><a href="user-profile.html">User Profile</a></li>                           
+                            <!--<li><a href="#">Enquiry Requests</a></li>-->
+                            <li><a href="my-venue-list.html">My Venue</a></li>
+                            <li><a href="add-venue.html">Add Venue</a></li>
+                             <li><a href="#" >Logout</a></li>
+                        </ul>
+        </li> 
+      <li><a href="login.html" style="border-right:1px solid #ccc"> Login </a></li>
+       <li><a href="signup.html">Signup</a></li>
+      <li><a href="#"><div class="venue-top-btn">I have a Venue</div></a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+  </div>
+  </div>
+
+
+    <!--container fluid main  starts-->
+    <div class="" style="margin-top:58px;">
+        <div class="">
+            <div class="col-md-1"></div>
+            <div class="col-md-3 listing-filter-main" >
+              
+                <!--listing-filter-main start-->
+                <div class="clearfix"></div>
+                <div class=" col-md-12 centered list-toggle">
+                     <div class=" col-md-12 centered list-toggle">
+                    <div class="btn-group" data-toggle="buttons-radio">
+                     <a href="listing-grid.html">   <button class="btn btn-warning grid-btn"  >
+                            <i class="fa fa-th"></i> Grid</button></a>
+                      <a href="listing-map.html">   <button class="btn btn-warning map-btn" style="color:#000">
+                            <i class="fa fa-location-arrow"></i> Map</button></a>
+                    </div>
+                </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="clearfix">&nbsp;</div>
+                
+                <div class="col-lg-12">
+                    <!--search bar start-->
+                    <button class="btn btn-default list-search-btn fa fa-search" type="button"></button>
+                    <input type="text" class="form-control list-search-input">
+                </div>
+                <!--search bar end-->
+
+                <div class="col-sm-3 col-md-12">
+                    <!--location start-->
+                    <div class="search-main-head">Find Your Venue</div>
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title search-heading">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" >Location</a>
+                                    <i class="fa fa-minus pull-right" style="color:#ff3300"></i>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in location-list">
+                                <div class="panel-body">
+                                    <div class="controls">
+                                    <div class="list-place-wrap">
+                                        <label class="checkbox checkbox-gidepage">
+                                                <input type="checkbox" name="checkboxG1" id="checkboxG1" class="css-checkbox" checked>
+                                                <label for="checkboxG1" class="css-label send-update">Blog</label>
+                                                <span class="badge list-count active">42</span>
+                                        </label>
+                                    </div>
+                                    <div class="list-place-wrap">
+                                        <label class="checkbox checkbox-gidepage">
+                                                <input type="checkbox" name="checkboxG2" id="checkboxG2" class="css-checkbox">
+                                                <label for="checkboxG2" class="css-label send-update">Editorial</label>
+                                                <span class="badge list-count">42</span>
+                                        </label>
+                                    </div>
+                                    <div class="list-place-wrap">
+                                         <label class="checkbox checkbox-gidepage">
+                                                <input type="checkbox" name="checkboxG3" id="checkboxG3" class="css-checkbox">
+                                                <label for="checkboxG3" class="css-label send-update">Announce</label>
+                                                <span class="badge list-count">42</span>
+                                        </label>
+                                    </div>
+                                    <div class="list-place-wrap">
+                                    <label class="checkbox checkbox-gidepage">
+                                               <input type="checkbox" name="checkboxG4" id="checkboxG4" class="css-checkbox">
+                                               <label for="checkboxG4" class="css-label send-update">Advertisement</label>
+                                               <span class="badge list-count">42</span>
+                                    </label>
+                                    </div>
+                                    </div>
+                                    <div class="search-locate-btn">Show all 115 Locations</div>
+                                      <p class="budget-perhead">Budget Perhead</p>
+                                     <div id="slider-range" style="margin:30px 0 0 0";></div>
+                           <h4 class="left-range"><i class="fa fa-rupee"></i> 500<br><span class="min">(min)</span></h4>
+                           <h4 class="right-range"><i class="fa fa-rupee"></i> 3500<br><span class="max">(max)</span></h4>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--location end-->
+
+                <div class="col-sm-3 col-md-12">
+                    <!--event type start-->
+                    <div class="clearfix">&nbsp;</div>
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title search-heading">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" >Event Type</a>
+                                    <i class="fa fa-plus pull-right" style="color:#666"></i>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse location-list">
+                                <div class="panel-body">
+                                <div class="controls">
+                                    <div class="list-place-wrap">
+                                        <label class="checkbox checkbox-gidepage">
+                                            <input type="checkbox" name="checkboxG5" id="checkboxG5" class="css-checkbox">
+                                            <label for="checkboxG5" class="css-label send-update">Blog</label>
+                                            <span class="badge list-count active">42</span>
+                                        </label>
+                                    </div>
+                                    <div class="list-place-wrap">
+                                        <label class="checkbox checkbox-gidepage">
+                                            <input type="checkbox" name="checkboxG6" id="checkboxG6" class="css-checkbox">
+                                            <label for="checkboxG6" class="css-label send-update">Editorial</label>
+                                            <span class="badge list-count">42</span>
+                                        </label>
+                                    </div>
+                                    <div class="list-place-wrap">
+                                         <label class="checkbox checkbox-gidepage">
+                                            <input type="checkbox" name="checkboxG7" id="checkboxG7" class="css-checkbox">
+                                            <label for="checkboxG7" class="css-label send-update">Announce</label>
+                                            <span class="badge list-count">42</span>
+                                        </label>
+                                    </div>
+                                    <div class="list-place-wrap">
+                                        <label class="checkbox checkbox-gidepage">
+                                            <input type="checkbox" name="checkboxG8" id="checkboxG8" class="css-checkbox">
+                                            <label for="checkboxG8" class="css-label send-update">Advertisement</label>
+                                            <span class="badge list-count">42</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--event type end-->
+
+
+                <div class="col-sm-3 col-md-12">
+                    <!--attending start-->
+                    <div class="clearfix">&nbsp;</div>
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title search-heading">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" >Number of People Attending </a>
+                                    <i class="fa fa-plus pull-right" style="color:#666"></i>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse location-list">
+                            <div class="panel-body">
+                                <div class="controls">
+                                    <div class="list-place-wrap">
+                                        <label class="checkbox checkbox-gidepage">
+                                            <input type="checkbox" name="checkboxG9" id="checkboxG9" class="css-checkbox">
+                                            <label for="checkboxG9" class="css-label send-update">Blog</label>
+                                            <span class="badge list-count active">42</span>
+                                        </label>
+                                    </div>
+                                    <div class="list-place-wrap">
+                                        <label class="checkbox checkbox-gidepage">
+                                            <input type="checkbox" name="checkboxG10" id="checkboxG10" class="css-checkbox">
+                                            <label for="checkboxG10" class="css-label send-update">Editorial</label>
+                                            <span class="badge list-count">42</span>
+                                        </label>
+                                    </div>
+                                    <div class="list-place-wrap">
+                                         <label class="checkbox checkbox-gidepage">
+                                            <input type="checkbox" name="checkboxG11" id="checkboxG11" class="css-checkbox">
+                                            <label for="checkboxG11" class="css-label send-update">Announce</label>
+                                            <span class="badge list-count">42</span>
+                                        </label>
+                                    </div>
+                                    <div class="list-place-wrap">
+                                        <label class="checkbox checkbox-gidepage">
+                                            <input type="checkbox" name="checkboxG12" id="checkboxG12" class="css-checkbox">
+                                            <label for="checkboxG12" class="css-label send-update">Advertisement</label>
+                                            <span class="badge list-count">42</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <a class="heads-option"><i class="fa fa-caret-down"></i> Advanced Options</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!--attending end-->
+               
+            </div>
+            <!--listing-filter-main end-->
+
+
+            <div class="col-md-8 listing-grid-main">
+                <!--listing-results-main-->
+                <div class="col-md-12 listing-grid-top">
+                    <div class="col-md-8 listing-top-left pull-left">Showing
+                        <span>357</span>Venues matching
+                        <strong>‘SearchText’</strong>
+                    </div>
+                    
+                    <div class="col-md-4 listing-top-right pull-right">
+                        <div class="dropdown list-sort">
+                            <span class="sort-by1">Sort By</span>
+                            <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary list-sort-btn" data-target="#" href="/page.html">Price (High to Low)
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu multi-level sort-btn" role="menu" aria-labelledby="dropdownMenu">
+                                <li>
+                                    <a href="#">Price (High to Low)</a>
+                                </li>
+                                <li>
+                                    <a href="#">Price (Low to High)</a>
+                                </li>
+                                <li>
+                                    <a href="#">Star Ratings</a>
+                                </li>
+                                <li>
+                                    <a href="#">Tripadvisor Ratings</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--listing-grid-top-left-->
+                </div>
+                <!--listing-grid-top end-->
+                <!--<div class="col-md-1 filter-search"><p>Filter :</p></div>-->
+                <div class="col-md-12">
+                     <div id="searchbar">                      
+                     <input type="text" id="vidyagames" name="token" placeholder="Last name" >
+                </div>
+                    
+<!--
+                <div class=" filter-main">
+                 <p>Filter :</p> 
+                    <span class="filter-display">Madhapur <a href="#"  > <img src="images/close.png"></a> </span>
+                    <span class="filter-display">Hi-Tech City <a href="#"  > <img src="images/close.png"></a> </span>
+                    <span class="filter-display">Kondapur <a href="#"  > <img src="images/close.png"></a> </span>
+                    <span class="filter-display">Gachibowli stadium <a href="#"  > <img src="images/close.png"></a> </span>
+                    
+                </div>                
+-->
+                </div>
+                
+                <div class="clearfix">&nbsp;</div>             
+                <ul class="scrollbar" id="style-5" >
+                    <li>
+                        <div class="col-md-12 list-grid-each">
+                            <div class="list-image-wrap">
+                                <!--tab-image-wrap start-->
+                                <img alt="" src="images/tab.jpg">
+                                <div class="col-md-12 list-image-thumb">
+                                    <div class="tab-logo-bg1">
+                                        <div class="tab-logo1">                                                 
+                                            <img src="images/logo12.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <h2 class="list-grid-head">The Sky Lounge</h2>
+                                <div class="list-grid-address">Avasa Hotels and Resorts</div>
+                                
+                                <div class="approx2" style="margin-left:8em;">
+                                    <div id="demo1"><p>35</p></div>
+                                    <div class="review1">Reviews</div>    
+                                </div>
+                                <div class="list-grid-stars">
+                                    <img src="images/home-rev-stars.png" width="51" height="13">
+                                </div>
+                                <div class="list-grid-stars">
+                                    <img src="images/brnd.jpg" >
+                                </div>
+
+                                <div class="col-md-12 list-grid-inner-left">
+                                    <!--list-grid-inner-left-->
+                                    <table>
+                                        <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Location </td>
+                                            <td class="list-grid-details-b">&nbsp; Madhapur, Hyderabad,IN</td>
+                                        </tr>
+                                         <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Capacity </td>
+                                            <td class="list-grid-details-b">&nbsp; 150-200 Pax</td>
+                                        </tr>
+                                         <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Venue Type </td>
+                                            <td class="list-grid-details-b">&nbsp; Banquet Hall</td>
+                                        </tr>
+                                                                          
+                                    </table>                        
+                                  
+                                    <div class="row">
+                                        <div class="col-md-12  centered ">Approx Pricing</div>
+                                    </div>
+                                    <div class="approx-price1">
+                                        <i class="fa fa-rupee"></i> 2000</div>
+                                    <div class="row">
+                                        <div class="col-md-12  centered ">Per Head</div>
+                                    </div>
+
+                                    <div class="col-md-5 list-grid-details-button search-locate-btn">Shortlist</div>
+                                    <div class="col-md-5 list-grid-details-button1 search-locate-btn">Request Quote</div>
+                                </div>
+                                <!--list-grid-inner-left-->
+                                <div class="col-md-12 list-grid-inner-left">
+                                    <!--list-grid-inner-right-->
+                                </div>
+                                <!--list-grid-inner-right-->
+                            </div>
+                            <!--tab-image-wrap end-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-md-12 list-grid-each">
+                            <div class="list-image-wrap">
+                                <!--tab-image-wrap start-->
+                                <img alt="" src="images/tab.jpg">
+                                <div class="col-md-5 list-image-thumb">
+                                    <div class="tab-logo-bg1">
+                                        <div class="tab-logo1">
+                                            <img src="images/logo12.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <h2 class="list-grid-head">The Sky Lounge</h2>
+                                <div class="list-grid-address">Avasa Hotels and Resorts</div>
+                                <div class="approx2" style="margin-left:8em;">
+                                    <div id="demo1"><p>35</p></div>
+                                    <div class="review1">Reviews</div>    
+                                </div>
+                                <div class="list-grid-stars">
+                                    <img src="images/home-rev-stars.png" width="51" height="13">
+                                </div>
+                                <div class="list-grid-stars">
+                                    <img src="images/brnd.jpg" >
+                                </div>
+                                <div class="col-md-12 list-grid-inner-left">
+                                    <!--list-grid-inner-left-->
+                                    <table>
+                                        <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Location </td>
+                                            <td class="list-grid-details-b">&nbsp; Madhapur, Hyderabad,IN</td>
+                                        </tr>
+                                         <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Capacity </td>
+                                            <td class="list-grid-details-b">&nbsp; 150-200 Pax</td>
+                                        </tr>
+                                         <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Venue Type </td>
+                                            <td class="list-grid-details-b">&nbsp; Banquet Hall</td>
+                                        </tr>
+                                                                          
+                                    </table>     
+                                    <div class="row">
+                                        <div class="col-md-12  centered ">Approx Pricing</div>
+                                    </div>
+                                    <div class="approx-price1">
+                                        <i class="fa fa-rupee"></i> 2000</div>
+                                    <div class="row">
+                                        <div class="col-md-12  centered ">Per Head</div>
+                                    </div>
+
+                                    <div class="col-md-5 list-grid-details-button search-locate-btn">Shortlist</div>
+                                    <div class="col-md-5 list-grid-details-button1 search-locate-btn">Request Quote</div>
+                                </div>
+                                <!--list-grid-inner-left-->
+                                <div class="col-md-12 list-grid-inner-left">
+                                    <!--list-grid-inner-right-->
+                                </div>
+                                <!--list-grid-inner-right-->
+
+                            </div>
+                            <!--tab-image-wrap end-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-md-12 list-grid-each">
+                            <div class="list-image-wrap">
+                                <!--tab-image-wrap start-->
+                                <img alt="" src="images/tab.jpg">
+                                <div class="col-md-5 list-image-thumb">
+                                    <div class="tab-logo-bg1">
+                                        <div class="tab-logo1">
+                                            <img src="images/logo12.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <h2 class="list-grid-head">The Sky Lounge</h2>
+                                <div class="list-grid-address">Avasa Hotels and Resorts</div>
+                                 <div class="approx2" style="margin-left:8em;">
+                                    <div id="demo1"><p>35</p></div>
+                                    <div class="review1">Reviews</div>    
+                                </div>
+                                <div class="list-grid-stars">
+                                    <img src="images/home-rev-stars.png" width="51" height="13">
+                                </div>
+                                <div class="list-grid-stars">
+                                    <img src="images/brnd.jpg" >
+                                </div>
+
+                                <div class="col-md-12 list-grid-inner-left">
+                                    <!--list-grid-inner-left-->
+                                    <table>
+                                        <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Location </td>
+                                            <td class="list-grid-details-b">&nbsp; Madhapur, Hyderabad,IN</td>
+                                        </tr>
+                                         <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Capacity </td>
+                                            <td class="list-grid-details-b">&nbsp; 150-200 Pax</td>
+                                        </tr>
+                                         <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Venue Type </td>
+                                            <td class="list-grid-details-b">&nbsp; Banquet Hall</td>
+                                        </tr>
+                                                                          
+                                    </table>     
+                                    <div class="row">
+                                        <div class="col-md-12  centered ">Approx Pricing</div>
+                                    </div>
+                                    <div class="approx-price1">
+                                        <i class="fa fa-rupee"></i> 2000</div>
+                                    <div class="row">
+                                        <div class="col-md-12  centered ">Per Head</div>
+                                    </div>
+
+                                    <div class="col-md-5 list-grid-details-button search-locate-btn">Shortlist</div>
+                                    <div class="col-md-5 list-grid-details-button1 search-locate-btn">Request Quote</div>
+                                </div>
+                                <!--list-grid-inner-left-->
+                                <div class="col-md-12 list-grid-inner-left">
+                                    <!--list-grid-inner-right-->
+                                </div>
+                                <!--list-grid-inner-right-->
+
+                            </div>
+                            <!--tab-image-wrap end-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-md-12 list-grid-each">
+                            <div class="list-image-wrap">
+                                <!--tab-image-wrap start-->
+                                <img alt="" src="images/tab.jpg">
+                                <div class="col-md-5 list-image-thumb">
+                                    <div class="tab-logo-bg1">
+                                        <div class="tab-logo1">
+                                            <img src="images/logo12.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <h2 class="list-grid-head">The Sky Lounge</h2>
+                                <div class="list-grid-address">Bar on the 11th floor</div>
+                                <div class="approx2" style="margin-left:8em;">
+                                    <div id="demo1"><p>35</p></div>
+                                    <div class="review1">Reviews</div>    
+                                </div>
+                                <div class="list-grid-stars">
+                                    <img src="images/home-rev-stars.png" width="51" height="13">
+                                </div>
+                                <div class="list-grid-stars">
+                                    <img src="images/brnd.jpg" >
+                                </div>
+
+                                <div class="col-md-12 list-grid-inner-left">
+                                    <!--list-grid-inner-left-->
+                                    <table>
+                                        <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Location </td>
+                                            <td class="list-grid-details-b">&nbsp; Madhapur, Hyderabad,IN</td>
+                                        </tr>
+                                         <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Capacity </td>
+                                            <td class="list-grid-details-b">&nbsp; 150-200 Pax</td>
+                                        </tr>
+                                         <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Venue Type </td>
+                                            <td class="list-grid-details-b">&nbsp; Banquet Hall</td>
+                                        </tr>
+                                                                          
+                                    </table>     
+                                    <div class="row">
+                                        <div class="col-md-12  centered ">Approx Pricing</div>
+                                    </div>
+                                    <div class="approx-price1">
+                                        <i class="fa fa-rupee"></i> 2000</div>
+                                    <div class="row">
+                                        <div class="col-md-12  centered ">Per Head</div>
+                                    </div>
+
+                                    <div class="col-md-5 list-grid-details-button search-locate-btn">Shortlist</div>
+                                    <div class="col-md-5 list-grid-details-button1 search-locate-btn">Request Quote</div>
+                                </div>
+                                <!--list-grid-inner-left-->
+                                <div class="col-md-12 list-grid-inner-left">
+                                    <!--list-grid-inner-right-->
+
+                                </div>
+                                <!--list-grid-inner-right-->
+                            </div>
+                            <!--tab-image-wrap end-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-md-12 list-grid-each">
+                            <div class="list-image-wrap">
+                                <!--tab-image-wrap start-->
+                                <img alt="" src="images/tab.jpg">
+                                <div class="col-md-5 list-image-thumb">
+                                    <div class="tab-logo-bg1">
+                                        <div class="tab-logo1">
+                                            <img src="images/logo12.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <h2 class="list-grid-head">The Sky Lounge</h2>
+                                <div class="list-grid-address">Bar on the 11th floor</div>
+                                <div class="approx2" style="margin-left:8em;">
+                                    <div id="demo1"><p>35</p></div>
+                                    <div class="review1">Reviews</div>    
+                                </div>
+                                <div class="list-grid-stars">
+                                    <img src="images/home-rev-stars.png" width="51" height="13">
+                                </div>
+                                <div class="list-grid-stars">
+                                    <img src="images/brnd.jpg" >
+                                </div>
+
+                                <div class="col-md-12 list-grid-inner-left">
+                                    <!--list-grid-inner-left-->
+                                    <table>
+                                        <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Location </td>
+                                            <td class="list-grid-details-b">&nbsp; Madhapur, Hyderabad,IN</td>
+                                        </tr>
+                                         <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Capacity </td>
+                                            <td class="list-grid-details-b">&nbsp; 150-200 Pax</td>
+                                        </tr>
+                                         <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Venue Type </td>
+                                            <td class="list-grid-details-b">&nbsp; Banquet Hall</td>
+                                        </tr>
+                                                                          
+                                    </table>     
+                                    <div class="row">
+                                        <div class="col-md-12  centered ">Approx Pricing</div>
+                                    </div>
+                                    <div class="approx-price1">
+                                       <i class="fa fa-rupee"></i> 2000</div>
+                                    <div class="row">
+                                        <div class="col-md-12  centered ">Per Head</div>
+                                    </div>
+
+                                    <div class="col-md-5 list-grid-details-button search-locate-btn">Shortlist</div>
+                                    <div class="col-md-5 list-grid-details-button1 search-locate-btn">Request Quote</div>
+                                </div>
+                                <!--list-grid-inner-left-->
+                                <div class="col-md-12 list-grid-inner-left">
+                                    <!--list-grid-inner-right-->
+
+                                </div>
+                                <!--list-grid-inner-right-->
+
+                            </div>
+                            <!--tab-image-wrap end-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-md-12 list-grid-each">
+                            <div class="list-image-wrap">
+                                <!--tab-image-wrap start-->
+                                <img alt="" src="images/tab.jpg">
+                                <div class="col-md-5 list-image-thumb">
+                                    <div class="tab-logo-bg1">
+                                        <div class="tab-logo1">
+                                            <img src="images/logo12.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <h2 class="list-grid-head">The Sky Lounge</h2>
+                                <div class="list-grid-address">Bar on the 11th floor</div>
+                                 <div class="approx2" style="margin-left:8em;">
+                                    <div id="demo1"><p>35</p></div>
+                                    <div class="review1">Reviews</div>    
+                                </div>
+                                <div class="list-grid-stars">
+                                    <img src="images/home-rev-stars.png" width="51" height="13">
+                                </div>
+                                <div class="list-grid-stars">
+                                    <img src="images/brnd.jpg" >
+                                </div>
+
+                                <div class="col-md-12 list-grid-inner-left">
+                                    <!--list-grid-inner-left-->
+                                   <table>
+                                        <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Location </td>
+                                            <td class="list-grid-details-b">&nbsp; Madhapur, Hyderabad,IN</td>
+                                        </tr>
+                                         <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Capacity </td>
+                                            <td class="list-grid-details-b">&nbsp; 150-200 Pax</td>
+                                        </tr>
+                                         <tr>
+                                            <td width="110" class="list-grid-details" align="center" >Venue Type </td>
+                                            <td class="list-grid-details-b">&nbsp; Banquet Hall</td>
+                                        </tr>
+                                                                          
+                                    </table>     
+                                    <div class="row">
+                                        <div class="col-md-12  centered ">Approx Pricing</div>
+                                    </div>
+                                    <div class="approx-price1">
+                                       <i class="fa fa-rupee"></i> 2000</div>
+                                    <div class="row">
+                                        <div class="col-md-12  centered ">Per Head</div>
+                                    </div>
+
+                                    <div class="col-md-5 list-grid-details-button search-locate-btn">Shortlist</div>
+                                    <div class="col-md-5 list-grid-details-button1 search-locate-btn">Request Quote</div>
+                                </div>
+                                <!--list-grid-inner-left-->
+                                <div class="col-md-12 list-grid-inner-left">
+                                    <!--list-grid-inner-right-->
+
+                                </div>
+                                <!--list-grid-inner-right-->
+
+                            </div>
+                            <!--tab-image-wrap end-->
+                        </div>
+                    </li>
+                    <div class="clearfix">&nbsp;</div>
+                    <div class="clearfix">&nbsp;</div>
+                      <div class="col-lg-12">  <a href="#" class="btn btn-primary btn-lg btn-block" style="border-radius:3px; border:1px solid #ccc;color:#666;background:url(images/loadmore-slice.png) ">Load More</a></div>
+                    <div class="clearfix"></div>
+                </ul>
+                    <div class="clearfix">&nbsp;</div>
+                    
+<!--              <div class="col-lg-12">  <a href="#" class="btn btn-primary btn-lg btn-block" style="border-radius:3px; border:1px solid #ccc;color:#666;background:url(images/loadmore-slice.png) ">Load More</a></div>-->
+            </div>
+
+        </div>
+        <!--row end-->
+    </div>
+    <!--container fluid end-->
+    </div>
+    </div>
+    <!--container fluid main ends-->
+
+    <div class="clearfix"></div> 
+    <!--footer start-->
+<div class="container-fluid footer-wrap"><!--container-fluid footer-wrap starts-->
+<div class="container"><!--container starts--> 
+  <div class="row"><!--row starts-->
+    <div class="col-lg-8 footer-top-left center"><!--col-lg-8 footer-top-left starts-->
+     <h2>Popular Cities</h2>
+     <a href="#">About Venues <span>|</span></a>    
+        <a href="#">How it Works <span>|</span></a>    
+        <a href="#">FAQ  <span>|</span></a>
+        <a href="#">Blog <span>|</span></a>
+        <a href="#">Contact Us <span>|</span></a>
+        <a href="#">Terms of use <span>|</span></a>
+        <a href="#">Privacy Policy</a>    
+        <div class="clearfix hidden-xs hidden-md">&nbsp;</div>  
+        <div class="clearfix hidden-xs hidden-md">&nbsp;</div>
+        <div class="clearfix hidden-xs hidden-md">&nbsp;</div>
+        <div class="clearfix hidden-xs hidden-md">&nbsp;</div>
+        <div class="clearfix hidden-xs hidden-md">&nbsp;</div>
+        <div class="clearfix hidden-xs hidden-md">&nbsp;</div>
+        <div class="clearfix hidden-xs hidden-md">&nbsp;</div>
+        <div class="col-lg-4 footer-small">
+        <ul>
+          <li><h2>Popular localities</h2></li>
+          <li><a href="#">Madhapur <span>(25)</span></a></li>
+          <li><a href="#">Kondapur <span>(25)</span></a></li>
+          <li><a href="#">Gachibowli <span>(25)</span></a></li>
+          <li><a href="#">Hitch City <span>(25)</span></a></li>
+          <li><a href="#">Banjara Hills <span>(25)</span></a></li>
+          <li><a href="#">Jubilee Hills <span>(25)</span></a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 footer-small">
+        <ul>
+          <li><h2>Browse by Event Type</h2></li>
+          <li><a href="#">Birthday Parties</a></li>
+          <li><a href="#">Wedding and Reception</a></li>
+          <li><a href="#">Family Functions</a></li>
+          <li><a href="#">Corporate</a></li>
+          <li><a href="#">Conference and Seminars</a></li>
+          <li><a href="#">Live Concerts</a></li> 
+          <li><a href="#">Theatre</a></li>              
+        </ul>
+      </div>
+      <div class="col-lg-4 footer-small">
+        <ul>
+          <li><h2>Browse By Budget (Per head)</h2></li>
+          <li><a href="#">Less than Rs 500</a></li>
+          <li><a href="#">Rs 500 to Rs 1000</a></li>
+          <li><a href="#">Rs 1000 to Rs 1500</a></li>
+          <li><a href="#">More than Rs 2000</a></li>              
+        </ul>
+      </div>
+    </div><!--col-lg-8 footer-top-left ends-->
+
+    <div class="col-lg-4 footer-top-right center"><!--foot-top-right start-->
+    <h2>Join Our Mailing List</h2>
+     <div class="row footer-mail-wrap">
+       <div class="col-lg-10 foot-right-input-wrap pull-left">
+       <input name="subscribe" type="text" class="foot-top-right-input" placeholder="Give us your email Address"></div>
+        <div class="col-lg-1 foot-right-go-btn-wrap pull-right"><input name="" type="button" class="foot-right-go-btn" value="go"></div>
+     </div>     
+    
+       <div class="col-lg-3 foot-follow">Follow Us on</div>
+            <div class="home-social-icons1">
+                <a href="https://twitter.com/" class="twitter" target="_blank"><!-- --></a>
+                <a href="https://www.facebook.com/" target="_blank" class="facebook"><!-- --></a>
+                <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><!-- --></a>
+ 		     </div>
+         <div class="clearfix"></div>
+           <div class="col-lg-11 footer-big"><!--col-lg-12 footer-big starts-->
+           <hr>
+            <ul class="footer-contact-left">
+              <li><h2>Contact Us at :</h2></li>
+              <li class="foot-call">Call us on :</li>
+              <li>+91 40 4040 4343</li>
+              <li>+91 76 7399 2244</li> 
+              <li class="foot-mail">Email us at :</li>
+              <li>venues@meraevents.com</li>             
+            </ul>
+          </div> <!--col-lg-12 footer-big ends-->          
+
+    </div><!--foot-top-right end-->
+   
+    </div><!--row ends-->
+    </div><!--container ends-->
+    </div><!--container-fluid footer-wrap ends-->
+
+   <!--see more popup starts-->
+<div class="container">
+	<div class="row">
+		<div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content"> 
+                <div class="modal-header">              
+                    <div class="modal-title" id="myModalLabel">
+                    <input name="subscribe" type="text" class="see-more-input" placeholder="Search For moreCities"></div>
+                </div>
+                <div class="modal-body modal-body-city">
+                    <div class="col-md-12 col-sx-12">                      
+                            <h4 class="popular-city">Popular Cities<h4>                       
+                    </div>
+                   <div class="col-md-3 col-sx-3">
+                    <ul class="list-unstyled locations-each">
+                        <li><a href="#" style="color:#ff3300" >Hyderabad</a></li>
+                      <li><a href="#">Bangalore</a></li>
+                      <li><a href="#">Jaipur</a></li>
+                      <li><a href="#">Kolkata</a></li>
+                      <li><a href="#">Chandigarh</a></li>
+                      <li><a href="#">Bangalore</a></li>
+                      <li><a href="#">Jaipur</a></li>
+                    </ul>
+                  </div>
+                    <div class="col-md-3 col-sx-3">
+                     <ul class="list-unstyled locations-each">
+                      <li><a href="#" >Hyderabad</a></li>
+                      <li><a href="#">Bangalore</a></li>
+                      <li><a href="#">Jaipur</a></li>
+                      <li><a href="#">Kolkata</a></li>
+                      <li><a href="#">Chandigarh</a></li>
+                      <li><a href="#">Bangalore</a></li>
+                      <li><a href="#">Jaipur</a></li>
+                    </ul>
+                  </div>
+                    <div class="col-md-3 col-sx-3">
+                    <ul class="list-unstyled locations-each">
+                      <li><a href="#" >Hyderabad</a></li>
+                      <li><a href="#">Bangalore</a></li>
+                      <li><a href="#">Jaipur</a></li>
+                      <li><a href="#">Kolkata</a></li>
+                      <li><a href="#">Chandigarh</a></li>
+                      <li><a href="#">Bangalore</a></li>
+                      <li><a href="#">Jaipur</a></li>
+                    </ul>
+                  </div>
+                       <div class="col-md-3 col-sx-3">
+                    <ul class="list-unstyled locations-each">
+                      <li><a href="#" >Hyderabad</a></li>
+                      <li><a href="#">Bangalore</a></li>
+                      <li><a href="#">Jaipur</a></li>
+                      <li><a href="#">Kolkata</a></li>
+                      <li><a href="#">Chandigarh</a></li>
+                      <li><a href="#">Bangalore</a></li>
+                      <li><a href="#">Jaipur</a></li>
+                    </ul>
+                  </div>
+                    <div class="clearfix"></div>
+                </div>              
+ 
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dalog -->
+</div><!-- /.modal -->  
+	</div>
+</div>
+<!--seemore popup ends-->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modernizr.custom.38872.js"></script>
+            
+   <!--price range starts-->   
+      <link rel="stylesheet" href="css/jquery-ui.css">
+      <script src="js/jquery-ui.js"></script>
+      <script>
+      $(function() {
+        $( "#slider-range" ).slider({
+          range: true,
+          min: 0,
+          max: 500,
+          values: [ 75, 300 ],
+          slide: function( event, ui ) {
+            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+          }
+        });
+        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+          " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+      });
+      </script>      
+  <!--price range ends-->  
+<!--token input value search filter-->        
+<link rel="stylesheet"  href="css/token-input-facebook.css">
+<script type="text/javascript" src="js/jquery.tokeninput.js"></script>        
+<script type="text/javascript">
+$(function(){
+  $('#vidyagames').tokenInput([
+      {id: 7, name: "Madhapur"},
+      {id: 11, name: "Hi-tech city"},
+      {id: 13, name: "Kukatpally"},
+      {id: 17, name: "Golkonda"},
+      {id: 19, name: "Kompally"},
+      {id: 23, name: "banjarahills"},
+      {id: 29, name: "Kondapur"},
+      {id: 32, name: "Bangalore"},
+      {id: 35, name: "kolkata"},
+      {id: 37, name: "Pune"},
+      {id: 38, name: "Gachibowli"},
+      {id: 41, name: "Mumbai"},
+      {id: 43, name: "Shamirpet"},
+      {id: 44, name: "Jubilee hills"},
+      {id: 46, name: "Ameerpet"},
+      {id: 47, name: "Begumpet"},
+      {id: 48, name: "Charminar"},
+      {id: 51, name: "Dhoolpet"},
+      {id: 53, name: "Erragadda"},
+      {id: 54, name: "Falaknuma"},
+      {id: 56, name: "Gujarat"},
+      {id: 59, name: "Hyderbad"},
+      {id: 62, name: "India"},
+      {id: 64, name: "Jeedimetla"},
+      {id: 65, name: "Shamshabad"},
+      {id: 72, name: "Thirupati"},
+      {id: 77, name: "Vijayavada"},
+      {id: 81, name: "Uppal"}
+    ], { 
+      theme: "facebook",
+      hintText: "Filter Cities",
+      noResultsText: "Nothin' found.",
+      searchingText: "Gaming...",
+      preventDuplicates: true
+    
+  }); 
+
+});
+</script> 
+        <!--token input value search filter-->
+</body>
+</html>

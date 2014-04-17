@@ -1,0 +1,18 @@
+.container-detail{width: 74.02%;margin: 0 auto; padding: 0; }
+.venue-details_left{width: 680px; height: auto; min-height: 100px; margin: 0; padding: 0;float: left;}
+.venue-details_right{width:348px; height: auto; min-height: 100px; margin: 0; padding: 0;float: left;}
+.see-review a{font-size: 14px;text-decoration: none;border-right: 2px solid #ccc;}
+.see-review a:last-child{border-right:none;}
+
+@media (min-width: 320px) and (max-width: 1024px) 
+{
+.venue-details_left{width: 100%;}
+.venue-details_right{width: 100%;}
+.with-background-text{width: 80%;}
+
+}
+
+
+
+
+    

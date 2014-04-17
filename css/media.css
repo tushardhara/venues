@@ -1,0 +1,18 @@
+@media all and (min-width: 1370px) and (max-width: 1920px)
+{
+   .search-result-left{width:auto !important} 
+   .search-result-right{width: 81%;}
+   @-moz-document url-prefix() {
+   .search-result-right{width: 76% !important;}
+   .listing-results-main ul {}
+   }
+   .search-heading{width: 102%}
+   .list-search-btn{right:26px !important;}
+   .list-sort{margin-right: 6em}
+   ul.token-input-list-facebook{width: 92% !important;}
+   .pagination-large li a{margin: 15px 19px 17px 19px !important; }
+   .right-range{margin-right: 2px !important;}
+}
+.filter-search{padding-right: 0px;width:10%; }
+.filter-search p{font-size: 20px;line-height:41px;background: #fff;border-right:0px !important;border:1px solid #ccc;text-align: center;border-radius: 3px 0 0 3px;}
+.right-range{margin: 10px 3px;}

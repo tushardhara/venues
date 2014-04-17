@@ -1,0 +1,995 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Venues</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="css/custom.css" rel="stylesheet">
+    <link href="css/detailpage.css" rel="stylesheet">
+       <script src="js/jquery-1.10.2.min.js"></script>   
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- Custom styles for this template -->
+	
+	<style>
+
+    .details-image-wrap img{width:100%}
+	.details-left{padding:0;margin:0;min-height:100px;}
+	.details-right{padding:0;margin:0;}
+	.details-head-large{color:#ff3300;font-size:30px;font-weight:900;margin:10px 0 5px 0}
+	.details-head-small{color:#333;font-size:20px;font-weight:500;margin:0}
+	.venue-details-map{height:280px;margin:10px 0px 15px 0px}
+	.details-tabs-main{background:#f9f9f3;min-height:100px;margin:0 0 25px 15px;}	
+
+	.details-tabs-nav{height:50px;background:#eeede6;overflow:hidden;margin:0 0 0px 0;/*-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.25);-moz-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.25);box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.25);*/}
+     .main-ul{background:#eeede6;height: 52px;}   
+	.tab-pane1 p{line-height:21px;font-size:14px;color:#333}
+	.tab-pane1 p span{font-size:17px;font-family: 'robotobold'}
+	.nav-pills>li>a{color:#333;font-size:14px}
+	.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{color:#ff5600;font-weight:bold;background:none !important;font-size:14px;}	
+	#lightbox .modal-content { display: inline-block; text-align: center}
+    #lightbox .close { opacity: 1; color: rgb(255, 255, 255); background-color: rgb(25, 25, 25); padding: 5px 8px; border-radius: 30px;
+    border: 2px solid rgb(255, 255, 255);  position: absolute;  top: -15px; right: -55px;z-index:1032}	
+	.thumbnail{margin:0;padding:0}
+	#pictures{margin:0;padding:0}
+	#pictures ul{margin:0;padding:0}	
+	.zero{margin:0;padding:0}	
+	
+     .contact-details{background: url(images/search-btno.png); border: none; border-radius:4px; margin: 10px 0;text-shadow: 1px 1px #999;
+-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.25);-moz-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.25);box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.25);}  
+    .contact-details:hover{background: url(images/search-btn.png);}
+    .rating-stars {margin: 18px 0;} 
+    .approx{margin: 10px 0; background:#f7f6ef;padding: 20px; border: 2px solid #e0e0e0; border-radius:4px;}
+	.approx h2{margin: 0; padding: 0;text-align: center;font-family: 'robotobold'}
+    .approx p{text-align: center;margin: 0 !important;padding: 0;font-size: 13px;line-height: 15px;font-family:'robotoregular';}
+	    
+     .approx1{margin: 10px 0; background:#e9e4db;padding: 20px; border: 2px solid #cccccc; border-radius:4px;height: 102px}
+     #demo {background-color: #ff6600;height: 30px;width: auto;min-width: 30px;position: relative;width: 0px;border-radius: 4px;top: 9px;
+left: 68px; }     
+     #demo:after {content: ' ';height: 0;position: absolute;width:0px;  border: 4px solid transparent;border-left-color: #ff6600;
+         left: 100%;top: 12px;}
+     #demo p{text-align: center !important;line-height: 30px;color: #fff;font-size: 1.5em;font-weight: bold;}
+    .review{color: #ff6600;font-size: 2em;margin-top: -21px;font-family: 'robotobold';margin-left: 21px;margin-bottom: 15px;}  
+    .trip{margin: 0;padding: 0;float: right;margin-right: -13px;}    
+    .contact-details-request{background:#fff; border:1px solid #ccc; border-radius:2px; margin: 10px 0;
+-webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.25);-moz-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.25);box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.25);font-family: robotoregular; color:#333;} 
+        
+    .contact-details-request:hover{color:#fff;border:1px solid #ccc;background: url(images/search-btn.png);}   
+    .venue h2{font-size: 2em;margin: 0px;font-family: robotobold;padding: 0;margin-top:9px;} 
+    .venue-max{background:#eeede6; border:1px solid #ccc; height: 52px; font-size:1.5em;font-family:'robotobold';
+        line-height: 52px;border-radius:2px;margin:10px 0;}  
+    .venue-max span{font-size: 1em;font-family: 'robotoregular'}        
+    .venue-max1{ font-size: 1.5em;font-family: 'robotobold';margin:0px 0}  
+    .venue-max1 span{font-size:1em;font-family: 'robotoregular'}     
+    .cost-per-rate-left{ float: left; font-size: 1.5em;font-family:'robotobold';text-align: left;margin: 5px 0 0 5px;}
+    .cost-per-rate-right{ float: right; font-size: 1.5em;font-family:'robotobold';text-align: right; margin: 5px 5px 0 0px;}
+    .total{background:#eeede6; border:1px solid #ccc; height: 80px; padding:11px 0;border-radius:2px; margin: 10px 0}    
+    .cost-per-rate-right span{font-size: 1em;}        
+    .cost-per-rate {background: #eeeee6;border-radius:2px; padding: 20px 0;margin: 6px 0;border:1px solid #ccc; }
+    .cost-per-rate-text{font-size: 17px;text-align: right; margin: 5px 0}
+    .exclus{font-weight: 500;font-size: 13px;}
+    .car{ font-size: 13px;font-family: 'robotoregular' }
+    .sticky{z-index: 999;width:666px;}
+    .sticky2{z-index: 999; width:100%;left:0;}
+       
+           
+   #accordian_size {position: relative; display: block; width: 19% !important; text-align: center;}
+   #accordian_size a{ padding-top:10%; padding-right:40% !important; padding-left:37.1% !important}
+   .sarovar{position: relative;float: right;margin-top: -8%; margin-right: 18%; width:20%; max-width: 200px; }
+   .col-md-6_{margin:0px; padding:0px;}
+   .left_15{margin-left:-15px;}
+   .right_30{float:right; right:-15px; position: relative;}
+        
+	</style>
+	
+	<script>
+	$(document).ready(function() {
+    var $lightbox = $('#lightbox');
+    
+    $('[data-target="#lightbox"]').on('click', function(event) {
+        var $img = $(this).find('img'), 
+            src = $img.attr('src'),
+            alt = $img.attr('alt'),
+            css = {
+                'maxWidth': $(window).width() - 100,
+                'maxHeight': $(window).height() - 100
+            };
+    
+        $lightbox.find('.close').addClass('hidden');
+        $lightbox.find('img').attr('src', src);
+        $lightbox.find('img').attr('alt', alt);
+        $lightbox.find('img').css(css);
+    });
+    
+    $lightbox.on('shown.bs.modal', function (e) {
+        var $img = $lightbox.find('img');
+            
+        $lightbox.find('.modal-dialog').css({'width': $img.width()});
+        $lightbox.find('.close').removeClass('hidden');
+    });
+});
+	</script>	
+	  
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <!--fb botton like -->  
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  <!--fb botton like -->      
+      
+ <div class="container-fluid menu-main navbar-fixed-top" >
+  <div class="container">
+  <nav class="navbar navbar-default  top-nav no_border" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" style=" border-right:1px solid #ccc; border-left:1px solid #ccc" data-toggle="dropdown"> Hyderabad <b class="caret"></b></a>
+        <ul class="dropdown-menu locations-main dropdown_grid">
+        <div class="container"> <!--1st country-->   
+  <div class="row">
+    <div class="col-lg-8">
+    <div class="col-md-11 locations-head-wrap"><img src="images/india.png">India( Top Cities ) </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Hyderabad</a></li>
+          <li><a href="#">Bangalore</a></li>
+          <li><a href="#">Jaipur</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Kolkata</a></li>
+          <li><a href="#">Chandigarh</a></li>
+          <li><a href="#">Punjab</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">New Delhi</a></li>
+          <li><a href="#">Lucknow</a></li>
+          <li><a href="#">Secunderabad</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Chennai</a></li>
+          <li><a href="#">Vizag</a></li>
+          <li class="seemore"><a data-toggle="modal" href="#myModal" >+ See more</a></li>
+        </ul>
+      </div>  
+    </div>
+  </div>
+      </div><!--1st country-->
+      
+      
+      <div class="container"> <!--2nd country-->   
+  <div class="row">
+    <div class="col-lg-8">
+    <div class="col-md-11 locations-head-wrap"><img src="images/india.png">India( Top Cities ) </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Hyderabad</a></li>
+          <li><a href="#">Bangalore</a></li>
+          <li><a href="#">Jaipur</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Kolkata</a></li>
+          <li><a href="#">Chandigarh</a></li>
+          <li><a href="#">Punjab</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">New Delhi</a></li>
+          <li><a href="#">Lucknow</a></li>
+          <li><a href="#">Secunderabad</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Chennai</a></li>
+          <li><a href="#">Vizag</a></li>
+          <li class="seemore"><a data-toggle="modal" href="#myModal">+ See more</a></li>
+        </ul>
+      </div>  
+    </div>
+  </div>
+      </div><!--2nd country-->
+      
+      
+      <div class="container"> <!--3rd country-->   
+  <div class="row">
+    <div class="col-lg-8">
+    <div class="col-md-11 locations-head-wrap"><img src="images/india.png">India( Top Cities ) </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Hyderabad</a></li>
+          <li><a href="#">Bangalore</a></li>
+          <li><a href="#">Jaipur</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Kolkata</a></li>
+          <li><a href="#">Chandigarh</a></li>
+          <li><a href="#">Punjab</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">New Delhi</a></li>
+          <li><a href="#">Lucknow</a></li>
+          <li><a href="#">Secunderabad</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled locations-each">
+          <li><a href="#">Chennai</a></li>
+          <li><a href="#">Vizag</a></li>
+          <li class="seemore"><a data-toggle="modal" href="#myModal">+ See more</a></li>
+        </ul>
+      </div>  
+    </div>
+  </div>
+      </div><!--3rd country-->
+      
+        </ul>
+      </li>
+        
+       <li class="active"><a href="#" style=" border-right:1px solid #ccc;"> Find a Venue</a></li>
+      <li><a href="#"><div class="req-quote-btn">Request a Quotation</div></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" style="display:none;">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="float:left;">
+             <img src="images/user.jpg" width="32" height="32" class="user-image-profile"> &nbsp; Snehanjan S.</a>
+                      <ul class="dropdown-menu dropdown-userprofile">
+                           <img src="images/pro.png" class="arrow-profile">
+                            <li><a href="setting.html">Settings</a></li>
+                            <li><a href="user-profile.html"   class="user-active">User Profile</a></li>                           
+                            <!--<li><a href="#">Enquiry Requests</a></li>-->
+                            <li><a href="my-venue-list.html">My Venue</a></li>
+                            <li><a href="add-venue.html" >Add Venue</a></li>
+                            <li><a href="#" >Logout</a></li>
+                        </ul>
+        </li> 
+      <li><a href="login.html" style="border-right:1px solid #ccc"> Login </a></li>
+       <li><a href="signup.html">Signup</a></li>
+      <li><a href="#"><div class="venue-top-btn">I have a Venue</div></a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+  </div>
+  </div>
+
+  <div class="clearfix ">&nbsp;</div>
+  <div class="clearfix ">&nbsp;</div>  
+    <div class="clearfix hidden-xs hidden-md">&nbsp;</div>  
+<!--details starts-->
+<div class="container-detail" style="margin-top:45px">
+  <div class="row">
+	 <div class="col-lg-12 details-image-wrap"><img src="images/slider.png"></div>     
+	<div class="clearfix"></div>
+ </div>
+ </div>
+  <img src="images/sarovar.png" class="sarovar"></div>
+ <div class="container-detail">
+ <div class="row">
+<div class="venue-details_left"><!--details-left start-->
+	<div class="col-md-12 details-head-large">The Sarovar Hall & Banquet</div>
+	<div class="col-md-12 details-head-small">The Aditya Sarovar Hotel</div>
+	<div class="clearfix">&nbsp;</div>
+    
+   <div class="col-md-12 like-pages">      
+       <ul>
+           <li><a href="#"><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div> </a></li>
+           <li class="twitter-like"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+           <li><a href="#"></a></li>
+           <li><a href="#"></a></li>
+       </ul>      
+    </div>     
+      
+	<div class="clearfix"></div>	
+	<div class="details-tabs-main"><!--details-tabs-main starts-->
+<div class="sticky2 main-ul">
+	<ul class="nav nav-pills details-tabs-nav sticky">
+       <li class="active" id="accordian_size"><a href="#about" data-toggle="tab">About</a></li>
+       <li id="accordian_size"><a href="#pictures">Pictures</a></li>
+       <li id="accordian_size"><a href="#seating" >Seating</a></li>
+       <li id="accordian_size"><a href="#packages" >Packages</a></li>
+       <li id="accordian_size"><a href="#reviews" >Reviews</a></li>
+   </ul>
+   </div>
+         <div class="clearfix ">&nbsp;</div>  
+    <div id='content' class="tab-content"><!--cotent tab-content starts-->
+      <div class="tab-pane1 active" id="about"><!--about tab starts-->      
+        <div class="venue-details-map">
+	<iframe width="100%" height="320" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=madhapur&amp;aq=&amp;sll=17.441148,78.391069&amp;sspn=0.097279,0.169086&amp;ie=UTF8&amp;hq=&amp;hnear=Madhapur,+Hyderabad,+Ranga+Reddy,+Andhra+Pradesh,+India&amp;t=m&amp;z=13&amp;ll=17.441148,78.391069&amp;output=embed"></iframe>
+	</div>
+        <div class="clearfix">&nbsp;</div>
+          <div class="clearfix">&nbsp;</div>
+          
+        <p><span>Address</span></p>
+          <h5>MADHAPUR - HYDERABAD, ANDHRA PRADESH, INDIA</h5>
+          <hr>
+        <p><span>About Venue</span></p>
+		<p>About Venue's Banquet Hall- Banyan Tree Retreat is one of the focused activities managed by MAK Projects, which is ideal for Business meetings and conferences. It is a top-clat Venues gated and guarded community consisting 300 premium villas surrounding by a large Space for Business Meetings in Hyderabad.</p>
+<p>It is idealistic in every aspect comprising modern facilities, world-class amenities and distinctive infrastructure. The Banquet Hall-Banyan Tree Retreat offers highly flexible Event venues in Hyderabad, which is a perfect choice for both corporate and social events. Some of its meeting and events facility includes birthday parties, wedding functions as well as seminars Business meetings and conferences.</p>
+<p><span>Capacity - </span>150 to 300 pax </p>
+<p><span>Type of Venues - </span>Banquet Hall</p>
+<p><span>Types of Events -</span> Parties, Birthday Parties, Anniversaries, Conferences</p>
+<p><span>Amenities -</span> A/V Equipment, Catering Available, Pool, Rooms Available, Smoking Allowed, Valet Parking, WiFi</p>
+<div class="clearfix"></div>
+<p>The Banquet Hall-Banyan Tree Retreat has its room dimensions of 3450 square feet, a tremendous destination for Business meetings and conferences, which is constantly based on Strategy and Knowledge.</p>
+
+<p>It also specify numerous recreational facilities such as Nine Hole Executive Golf Course, Resort Nestles, Landscaped Gardens, and Avenue Plantation equipped with the State-of-the-art Street Lighting and Solar Fencing, providing jogging track, Poly clinic as well as Broadband connectivity for Business meetings and conferences. </p>
+
+<p>It comprises worldwide famed architectural firm of SAA International Sdn Bhd backed by extraordinary interior and contemporary lifestyle. The architects has network of associate offices across the world including Singapore, Brunei, Indonesia, Malaysia, Vietnam and China.</p>
+
+<p>Having such a splendid view it also offers three exquisite villas named as Cedar, Maple and Oak Villas with a Club House, Golf Course, Recreational Facility, Commercial Space and Apartments promising to provide a luxurious lifestyle with the classics of relaxation and entertainment. </p>
+
+<p  id="pictures">Banyan Tree Retreat is conveniently located on the Srisalam highway at Maheswaram offers a higher level of luxury and user-friendly living environment. It takes 15 minutes to reach Hyderabad International Airport and 5 minutes to the Outer Ring Road from the Hotel which makes it an easy accessible venue to all the major routes of the city.</p>
+</p>
+</div><!--about tab ends-->
+       <div class="clearfix">&nbsp;</div> 
+      <hr>  
+        
+      <div class="tab-pane1" ><!--pictures tab starts-->
+          <div class="clearfix">&nbsp;</div>
+           <p><span>Pictures(5)</span></p>
+          <div class="clearfix">&nbsp;</div>
+        <ul style="margin:0; padding:0;">
+         <div class="col-md-12 zero" >
+            <div class="col-xs-6 col-md-6">
+                <a href="#" class="thumbnail left_15" data-toggle="modal" data-target="#lightbox"> 
+                    <img src="images/chair4.jpg" width="100%" alt="..." />
+                </a>
+            </div>
+             
+            <div class="col-xs-6 col-md-6">
+                <a href="#" class="thumbnail right_30" data-toggle="modal" data-target="#lightbox"> 
+                    <img src="images/chair4.jpg" width="100%" alt="..." />
+                </a>
+            </div>
+             <div class="clearfix ">&nbsp;</div>
+             <div class="clearfix ">&nbsp;</div>       
+            <div class="clearfix">&nbsp;</div> 
+            <div class="clearfix">&nbsp;</div>
+            <div class="col-xs-6 col-md-6">
+                <a href="#" class="thumbnail left_15" data-toggle="modal" data-target="#lightbox"> 
+                    <img src="images/chair4.jpg" width="100%" alt="..." />
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-6">
+                <a href="#" class="thumbnail right_30" data-toggle="modal" data-target="#lightbox"> 
+                    <img src="images/chair4.jpg" width="100%" alt="..." />
+                </a>
+            </div>
+             
+            <div class="clearfix">&nbsp;</div> 
+            <div class="clearfix">&nbsp;</div>
+              <div class="clearfix ">&nbsp;</div>
+             <div class="clearfix ">&nbsp;</div>  
+            <div class="col-xs-6 col-md-6">
+                <a href="#" class="thumbnail left_15 " data-toggle="modal" data-target="#lightbox"> 
+                    <img src="images/chair4.jpg" width="100%" alt="..." />
+                </a>
+            </div> 
+         </div>
+            
+        <div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <button type="button" class="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <img src="" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ul>
+</div><!--pictures tab ends-->
+    <div class="clearfix">&nbsp;</div>
+    <div class="clearfix">&nbsp;</div>
+   <hr> 
+        
+    <div class="tab-pane1" id="seating"><!--seating tab starts-->
+        <div class="clearfix">&nbsp;</div>
+        <div class="clearfix">&nbsp;</div>
+     <p><span>Seating Type and Capacity(5)</span></p>
+    <div class="clearfix">&nbsp;</div>
+   
+     
+        <div class="row col-md-12">
+            <div class="col-md-2" style="padding-left:0px;">
+                <img src="images/slide1.png" width="100%"  alt="...." />   
+            </div>
+            <div class="col-md-8">    
+                <h4 class="seating-heading">Floatig Arrangement</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            </div>
+            <div class="col-md-2">
+                 <p class="pull-right pax-number"><strong>100 Pax</strong></p>    
+            </div>          
+        </div>
+        <div class="clearfix hidden-xs hidden-md">&nbsp;</div>
+        <div class="row col-md-12">
+            <div class="col-md-2" style="padding-left:0px;">
+                <img src="images/slide2.png" width="100%"  alt="...." />   
+            </div>
+            <div class="col-md-8">    
+                <h4 class="seating-heading">Cluster Seating Arrangement</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            </div>
+            <div class="col-md-2">
+                 <p class="pull-right pax-number"><strong>100 Pax</strong></p>    
+            </div>          
+        </div>
+        <div class="clearfix hidden-xs hidden-md">&nbsp;</div>
+        <div class="row col-md-12">
+            <div class="col-md-2" style="padding-left:0px;">
+                <img src="images/slide3.png" width="100%"  alt="...." />   
+            </div>
+            <div class="col-md-8">    
+                <h4 class="seating-heading">Class Room like Arrangement</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            </div>
+            <div class="col-md-2">
+                 <p class="pull-right pax-number"><strong>100 Pax</strong></p>    
+            </div>          
+        </div>
+        <div class="clearfix hidden-xs hidden-md">&nbsp;</div>
+        <div class="row col-md-12">
+            <div class="col-md-2" style="padding-left:0px;">
+                <img src="images/slide1.png" width="100%"  alt="...." />   
+            </div>
+            <div class="col-md-8">    
+                <h4 class="seating-heading">Boardroom Arrangement</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            </div>
+            <div class="col-md-2">
+                 <p class="pull-right pax-number"><strong>100 Pax</strong></p>    
+            </div>          
+        </div>        
+    </div><!--seating tab ends-->
+    <div class="clearfix">&nbsp;</div>
+    <div class="clearfix">&nbsp;</div>
+    <div class="clearfix">&nbsp;</div>    
+   <hr> 
+        
+     <div class="tab-pane1" id="packages"><!--packages tab starts-->
+         <div class="clearfix">&nbsp;</div>
+         <div class="clearfix">&nbsp;</div>
+      <p><span>Packages (2)</span></p>
+      <div class="clearfix">&nbsp;</div>
+
+         <div class="col-md-12 packages-main">
+             <h4 class="centered non-veg">NOn -Veg Standard</h4>
+             <h5 class="centered with-background-text">No. Of Non veg items - 2</h5>
+             <h5 class="centered without-background-text">No. Of items</h5>
+             <h5 class="centered with-background-text">Soft Drinks Available</h5>
+             <h5 class="centered without-background-text">Total Drinkss</h5>
+             <h5 class="centered with-background-text">No. Of Non veg items - 2</h5>
+             <h5 class="centered without-background-text">No. Of items</h5>
+             <h5 class="centered with-background-text">No. Of Non veg items - 2</h5>
+             <h5 class="centered without-background-text">No. Of items</h5>
+             <h4 class="veg-price"><i class="fa fa-rupee"></i> 1700/Person</h4>
+             <p class="veg-tax">Exclusive of service tax</p>           
+         </div> 
+         
+         <div class="clearfix">&nbsp;</div>
+         <div class="clearfix">&nbsp;</div>
+         <div class="col-md-12 packages-main">
+             <h4 class="centered non-veg">NOn -Veg Standard</h4>
+             <h5 class="centered with-background-text">No. Of Non veg items - 2</h5>
+             <h5 class="centered without-background-text">No. Of items</h5>
+             <h5 class="centered with-background-text">Soft Drinks Available</h5>
+             <h5 class="centered without-background-text">Total Drinkss</h5>
+             <h5 class="centered with-background-text">No. Of Non veg items - 2</h5>
+             <h5 class="centered without-background-text">No. Of items</h5>
+             <h5 class="centered with-background-text">No. Of Non veg items - 2</h5>
+             <h5 class="centered without-background-text">No. Of items</h5>
+             <h4 class="veg-price"><i class="fa fa-rupee"></i> 1700/Person</h4>
+             <p class="veg-tax">Exclusive of service tax</p>           
+         </div> 
+         
+     </div> <!--packages tab ends--> 
+
+    <div class="clearfix">&nbsp;</div>
+    <div class="clearfix">&nbsp;</div>
+    <div class="clearfix">&nbsp;</div>    
+   <hr> 
+        
+    <div class="tab-pane1" id="reviews"><!--reviews tab starts-->
+        <div class="clearfix">&nbsp;</div>
+        <div class="clearfix">&nbsp;</div>
+      <p><span>Reviews</span></p>
+    <div class="clearfix">&nbsp;</div>  
+        
+     <div class="row col-md-9 ">
+     <h4 class="seating-heading">Excellent Hotels and Other Accommodation Facilities</h4>
+     <p class="review-date">By Banjara 2 feb 2014</p>
+         <div class="clearfix">&nbsp;</div>
+    </div>
+  <div class="col-md-3 pull-right"><div class=" pull-right"> <img src="images/star1.png" width="20"><img src="images/star1.png" width="20"><img src="images/star1.png" width="20"><img src="images/star2.png" width="20"><img src="images/star2.png" width="20"></div></div>    
+
+    <div class="clearfix">&nbsp;</div>
+    <p>About Venue's Banquet Hall- Banyan Tree Retreat is one of the focused activities managed by MAK Projects, which is ideal for Business meetings and conferences. It is a top-clat Venues gated and guarded community consisting 300 premium villas surrounding by a large Space for Business Meetings in Hyderabad.It is idealistic in every aspect comprising modern facilities, world-class amenities and distinctive infrastructure. The Banquet Hall-Banyan Tree Retreat offers highly flexible Event venues in Hyderabad, which is a perfect choice for both corporate and social events. Some of its meeting and events facility includes birthday parties, wedding functions as well as seminars Business meetings and conferences.</p>
+         <hr>
+        <div class="clearfix">&nbsp;</div> 
+     
+        
+     <div class="clearfix">&nbsp;</div>        
+     <div class="row col-md-9">
+     <h4 class="seating-heading">Excellent Hotels and Other Accommodation Facilities</h4>
+     <p class="review-date">By Banjara 2 feb 2014</p>
+         <div class="clearfix">&nbsp;</div>
+    </div>
+    <div class="col-md-3 pull-right"><div class=" pull-right"> <img src="images/star1.png" width="20"><img src="images/star1.png" width="20"><img src="images/star1.png" width="20"><img src="images/star2.png" width="20"><img src="images/star2.png" width="20"></div></div>     
+   
+    <div class="clearfix">&nbsp;</div>
+    <p>About Venue's Banquet Hall- Banyan Tree Retreat is one of the focused activities managed by MAK Projects, which is ideal for Business meetings and conferences. It is a top-clat Venues gated and guarded community consisting 300 premium villas surrounding by a large Space for Business Meetings in Hyderabad.It is idealistic in every aspect comprising modern facilities, world-class amenities and distinctive infrastructure. The Banquet Hall-Banyan Tree Retreat offers highly flexible Event venues in Hyderabad, which is a perfect choice for both corporate and social events. Some of its meeting and events facility includes birthday parties, wedding functions as well as seminars Business meetings and conferences.</p>
+         <hr>
+        <div class="clearfix">&nbsp;</div> 
+    
+        
+        
+     <div class="clearfix">&nbsp;</div>        
+     <div class="row col-md-9">
+     <h4 class="seating-heading">Excellent Hotels and Other Accommodation Facilities</h4>
+     <p class="review-date">By Banjara 2 feb 2014</p>
+         <div class="clearfix">&nbsp;</div>
+    </div>
+    <div class="col-md-3 pull-right"><div class=" pull-right"> <img src="images/star1.png" width="20"><img src="images/star1.png" width="20"><img src="images/star1.png" width="20"><img src="images/star2.png" width="20"><img src="images/star2.png" width="20"></div></div>     
+
+    <div class="clearfix">&nbsp;</div>
+    <p>About Venue's Banquet Hall- Banyan Tree Retreat is one of the focused activities managed by MAK Projects, which is ideal for Business meetings and conferences. It is a top-clat Venues gated and guarded community consisting 300 premium villas surrounding by a large Space for Business Meetings in Hyderabad.It is idealistic in every aspect comprising modern facilities, world-class amenities and distinctive infrastructure. The Banquet Hall-Banyan Tree Retreat offers highly flexible Event venues in Hyderabad, which is a perfect choice for both corporate and social events. Some of its meeting and events facility includes birthday parties, wedding functions as well as seminars Business meetings and conferences.</p>
+         <hr>
+        <div class="clearfix">&nbsp;</div> 
+   
+       
+     <div class="row col-md-9">
+     <h4 class="seating-heading">Excellent Hotels and Other Accommodation Facilities</h4>
+     <p class="review-date">By Banjara 2 feb 2014</p>
+         <div class="clearfix">&nbsp;</div>
+    </div>
+ <div class="col-md-3 pull-right"><div class=" pull-right"> <img src="images/star1.png" width="20"><img src="images/star1.png" width="20"><img src="images/star1.png" width="20"><img src="images/star2.png" width="20"><img src="images/star2.png" width="20"></div></div>    
+
+    <div class="clearfix">&nbsp;</div>
+    <p>About Venue's Banquet Hall- Banyan Tree Retreat is one of the focused activities managed by MAK Projects, which is ideal for Business meetings and conferences. It is a top-clat Venues gated and guarded community consisting 300 premium villas surrounding by a large Space for Business Meetings in Hyderabad.It is idealistic in every aspect comprising modern facilities, world-class amenities and distinctive infrastructure. The Banquet Hall-Banyan Tree Retreat offers highly flexible Event venues in Hyderabad, which is a perfect choice for both corporate and social events. Some of its meeting and events facility includes birthday parties, wedding functions as well as seminars Business meetings and conferences.</p>
+ <div class="clearfix">&nbsp;</div>
+<div class="clearfix">&nbsp;</div>
+  <div class="row">
+      <div class="see-review pull-right" >  
+      <a href="#"> Write a review &nbsp; </a> <a href="#"> &nbsp; See all review </a>
+      </div> 
+    </div>              
+    </div><!--reviews tab starts-->    
+        
+ </div><!--cotent tab-content ends-->
+</div><!--details-tabs-main ends-->	
+     <div class="clearfixs"></div>
+</div><!--details-left end-->
+
+<div class="venue-details_right details-right"><!--details-right start-->
+    
+     <div class="clearfix">&nbsp;</div>
+    <div class="col-md-12">    
+      <a href="#" class="btn btn-primary btn-lg btn-block contact-details">Contact</a>
+    </div>
+
+    <div class="col-md-12">    
+      <div class="centered rating-stars" ><img src="images/star1.png"><img src="images/star1.png"><img src="images/star1.png"><img src="images/star2.png"><img src="images/star2.png"> </div>
+    </div>
+    
+    <div class="col-md-12 centered "> 
+        <div class="approx">
+        <p>approx</p>
+        <h2><i class="fa fa-rupee"></i> 2000</h2>
+        <p>per head onwords</p>
+        </div>                           
+    </div>
+    
+    <div class="col-md-12 centered "> 
+        <div class="approx1">
+        <div id="demo"><p>35</p></div>
+        <div class="review">Reviews</div> 
+             <img src="images/trip.png" class="trip">
+        </div>  
+       
+    </div>
+    
+    <div class="col-md-12">    
+      <a href="#" class="btn btn-primary btn-lg btn-block contact-details-request">Request a Quote</a>
+    </div>
+    
+    <div class="col-md-12 venue">    
+     <h2>Venue Details</h2>        
+    </div>
+    
+    <div class="col-md-12"><div class="venue-max centered">Max <span>1000 Pax</span></div></div>
+    <div class="col-md-12"><div class="venue-max1 centered">Min <span>50 Pax</span></div></div>
+    
+    
+    <div class="col-md-12"><div class="venue-max centered">Venue Type<span> &nbsp; Indoor</span></div></div>
+  
+    <div class="col-md-12">
+        <div class="cost-per-rate-left">
+          Cost Per Rate<br> (Veg)
+        </div>
+        <div class="cost-per-rate-right">
+        <i class="fa fa-rupee"></i> 399<br>
+         <span style="font-family: 'robotoregular';">Exclusive of Taxes</span>
+        </div>
+    </div>
+     <div class="clearfix hidden-xs hidden-md">&nbsp;</div>
+     <div class="col-md-12">
+         <div class="total">
+        <div class="cost-per-rate-left">
+          Cost Per Rate<br> (Non Veg)
+        </div>
+        <div class="cost-per-rate-right">
+        <i class="fa fa-rupee"></i> 399<br>
+         <span style="font-family: 'robotoregular';">Exclusive of Taxes</span>
+        </div>
+             </div>
+    </div>
+     <div class="clearfix hidden-xs hidden-md">&nbsp;</div>
+      <div class="col-md-12"><div class="venue-max1 centered">Packing Capacity <span> 175</span></div></div>
+     <div class="clearfix hidden-xs hidden-md">&nbsp;</div>
+      <div class="col-md-12"><div class="venue-max centered">Valet Parking<span> &nbsp; Yes</span></div></div>
+      <div class="col-md-12"><div class="venue-max1 centered">Catering <span> Not Allowed</span></div></div>
+      <div class="col-md-12"><div class="venue-max centered">Food Type<span> &nbsp; Non Veg & Veg</span></div></div> 
+      <div class="col-md-12"><div class="venue-max1 centered">Alcoholic  Beverages<span> Yes</span></div></div>
+      <div class="col-md-12"><div class="venue-max centered">Outside Decorations<span> &nbsp; Yes</span></div></div>
+      <div class="col-md-12"><div class="venue-max1 centered">Other Services<p class="car">Car & Bus Rental | Fire works Display | DJ & Live Music |         Electricity Back-up | Air Conditoned</p></div></div> 
+      
+   
+</div><!--details-right end-->
+
+</div>
+</div>
+<div class="clearfix"></div>
+<!--details ends-->
+
+<!--footer start-->
+<div class="container-fluid footer-wrap"><!--container-fluid footer-wrap starts-->
+<div class="container"><!--container starts--> 
+  <div class="row"><!--row starts-->
+    <div class="col-lg-8 footer-top-left center"><!--col-lg-8 footer-top-left starts-->
+     <h2>Popular Cities</h2>
+     <a href="#">About Venues <span>|</span></a>    
+        <a href="#">How it Works <span>|</span></a>    
+        <a href="#">FAQ  <span>|</span></a>
+        <a href="#">Blog <span>|</span></a>
+        <a href="#">Contact Us <span>|</span></a>
+        <a href="#">Terms of use <span>|</span></a>
+        <a href="#">Privacy Policy</a>    
+        <div class="clearfix hidden-xs hidden-md">&nbsp;</div>  
+        <div class="clearfix hidden-xs hidden-md">&nbsp;</div>
+        <div class="clearfix hidden-xs hidden-md">&nbsp;</div>
+        
+        <div class="col-lg-4 footer-small">
+        <ul>
+          <li><h2>Popular localities</h2></li>
+          <li><a href="#">Madhapur <span>(25)</span></a></li>
+          <li><a href="#">Kondapur <span>(25)</span></a></li>
+          <li><a href="#">Gachibowli <span>(25)</span></a></li>
+          <li><a href="#">Hitch City <span>(25)</span></a></li>
+          <li><a href="#">Banjara Hills <span>(25)</span></a></li>
+          <li><a href="#">Jubilee Hills <span>(25)</span></a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 footer-small">
+        <ul>
+          <li><h2>Browse by Event Type</h2></li>
+          <li><a href="#">Birthday Parties</a></li>
+          <li><a href="#">Wedding and Reception</a></li>
+          <li><a href="#">Family Functions</a></li>
+          <li><a href="#">Corporate</a></li>
+          <li><a href="#">Conference and Seminars</a></li>
+          <li><a href="#">Live Concerts</a></li> 
+          <li><a href="#">Theatre</a></li>              
+        </ul>
+      </div>
+      <div class="col-lg-4 footer-small">
+        <ul>
+          <li><h2>Browse By Budget (Per head)</h2></li>
+          <li><a href="#">Less than Rs 500</a></li>
+          <li><a href="#">Rs 500 to Rs 1000</a></li>
+          <li><a href="#">Rs 1000 to Rs 1500</a></li>
+          <li><a href="#">More than Rs 2000</a></li>              
+        </ul>
+      </div>
+    </div><!--col-lg-8 footer-top-left ends-->
+
+    <div class="col-lg-4 footer-top-right center"><!--foot-top-right start-->
+    <h2>Join Our Mailing List</h2>
+     <div class="row footer-mail-wrap">
+       <div class="col-lg-10 foot-right-input-wrap pull-left">
+       <input name="subscribe" type="text" class="foot-top-right-input" placeholder="Give us your email Address"></div>
+        <div class="col-lg-1 foot-right-go-btn-wrap pull-right"><input name="" type="button" class="foot-right-go-btn" value="go"></div>
+     </div>     
+    
+       <div class="col-lg-3 foot-follow">Follow Us on</div>
+            <div class="home-social-icons1">
+                <a href="https://twitter.com/" class="twitter" target="_blank"><!-- --></a>
+                <a href="https://www.facebook.com/" target="_blank" class="facebook"><!-- --></a>
+                <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><!-- --></a>
+ 		     </div>
+         <div class="clearfix"></div>
+           <div class="col-lg-11 footer-big"><!--col-lg-12 footer-big starts-->
+           <hr>
+            <ul class="footer-contact-left">
+              <li><h2>Contact Us at :</h2></li>
+              <li class="foot-call">Call us on :</li>
+              <li>+91 40 4040 4343</li>
+              <li>+91 76 7399 2244</li> 
+              <li class="foot-mail">Email us at :</li>
+              <li>venues@meraevents.com</li>             
+            </ul>
+          </div> <!--col-lg-12 footer-big ends-->          
+
+    </div><!--foot-top-right end-->
+   
+    </div><!--row ends-->
+    </div><!--container ends-->
+    </div><!--container-fluid footer-wrap ends-->
+  
+  
+  <div class="container-fluid  footer-bottom">
+  <div class="container"><!--container stars-->
+  <div class="row">
+      <div class="col-md-12 foot-bottom-links">
+       <a href="#">About Venues <span>|</span></a>    
+        <a href="#">How it Works <span>|</span></a>    
+        <a href="#">FAQ  <span>|</span></a>
+        <a href="#">Blog <span>|</span></a>
+        <a href="#">Contact Us <span>|</span></a>
+        <a href="#">Terms of use <span>|</span></a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="col-md-12 foot-bottom-links">
+        © All Rights Reserved 2014 | Versant Online Solutions Pvt. Ltd.
+      </div>
+    </div>
+  </div><!--container ends-->
+</div>
+</div>
+<!--footer end-->
+
+
+
+<!--see more popup starts-->
+<div class="container">
+	<div class="row">
+		<div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+ 
+                <div class="modal-header">
+              
+                    <div class="modal-title" id="myModalLabel">
+                    <input name="subscribe" type="text" class="see-more-input" placeholder="Search For moreCities"></div>
+                </div>
+                <div class="modal-body modal-body-city">
+                    <div class="col-md-12 col-sx-12">                      
+                            <h4 class="popular-city">Popular Cities<h4>                       
+                    </div>
+                   <div class="col-md-3 col-sx-3">
+                    <ul class="list-unstyled locations-each">
+                       <li><a href="#" style="color:#ff3300" >Hyderabad</a></li>
+                      <li><a href="#">Bangalore</a></li>
+                      <li><a href="#">Jaipur</a></li>
+                      <li><a href="#">Kolkata</a></li>
+                      <li><a href="#">Chandigarh</a></li>
+                      <li><a href="#">Bangalore</a></li>
+                      <li><a href="#">Jaipur</a></li>
+                    </ul>
+                  </div>
+                    <div class="col-md-3 col-sx-3">
+                     <ul class="list-unstyled locations-each">
+                      <li><a href="#" >Hyderabad</a></li>
+                      <li><a href="#">Bangalore</a></li>
+                      <li><a href="#">Jaipur</a></li>
+                      <li><a href="#">Kolkata</a></li>
+                      <li><a href="#">Chandigarh</a></li>
+                      <li><a href="#">Bangalore</a></li>
+                      <li><a href="#">Jaipur</a></li>
+                    </ul>
+                  </div>
+                    <div class="col-md-3 col-sx-3">
+                    <ul class="list-unstyled locations-each">
+                      <li><a href="#" >Hyderabad</a></li>
+                      <li><a href="#">Bangalore</a></li>
+                      <li><a href="#">Jaipur</a></li>
+                      <li><a href="#">Kolkata</a></li>
+                      <li><a href="#">Chandigarh</a></li>
+                      <li><a href="#">Bangalore</a></li>
+                      <li><a href="#">Jaipur</a></li>
+                    </ul>
+                  </div>
+                       <div class="col-md-3 col-sx-3">
+                    <ul class="list-unstyled locations-each">
+                      <li><a href="#" >Hyderabad</a></li>
+                      <li><a href="#">Bangalore</a></li>
+                      <li><a href="#">Jaipur</a></li>
+                      <li><a href="#">Kolkata</a></li>
+                      <li><a href="#">Chandigarh</a></li>
+                      <li><a href="#">Bangalore</a></li>
+                      <li><a href="#">Jaipur</a></li>
+                    </ul>
+                  </div>
+                    <div class="clearfix"></div>
+                </div>              
+ 
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dalog -->
+</div><!-- /.modal -->  
+
+	</div>
+</div>
+<!--seemore popup ends-->
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modernizr.custom.38872.js"></script>
+
+
+	<script type="text/javascript">
+		$(function(){ // document ready
+
+		  if (!!$('.sticky').offset()) { // make sure ".sticky" element exists
+
+		    var stickyTop = $('.sticky').offset().top; // returns number 
+
+		    $(window).scroll(function(){ // scroll event
+
+		      var windowTop = $(window).scrollTop(); // returns number 
+
+		      if (stickyTop < windowTop){
+		        $('.sticky').css({ position: 'fixed', top: 57,left: 175 });
+		      }
+		      else {
+		        $('.sticky').css('position','static');
+		      }
+
+		    });
+
+		  }
+
+		});
+	</script>
+        <script type="text/javascript">
+		$(function(){ // document ready
+
+		  if (!!$('.sticky2').offset()) { // make sure ".sticky" element exists
+
+		    var stickyTop = $('.sticky2').offset().top; // returns number 
+
+		    $(window).scroll(function(){ // scroll event
+
+		      var windowTop = $(window).scrollTop(); // returns number 
+
+		      if (stickyTop < windowTop){
+		        $('.sticky2').css({ position: 'fixed', top: 57 });
+		      }
+		      else {
+		        $('.sticky2').css('position','static');
+		      }
+
+		    });
+
+		  }
+
+		});
+	</script>
+<!--
+         <script type="text/javascript">
+		$(function(){ // document ready
+
+		  if (!!$('.sticky3').offset()) { // make sure ".sticky" element exists
+
+		    var stickyTop = $('.sticky3').offset().top; // returns number 
+
+		    $(window).scroll(function(){ // scroll event
+
+		      var windowTop = $(window).scrollTop(); // returns number 
+
+		      if (stickyTop < windowTop){
+		        $('.sticky3').css({ position: 'fixed', top: 57});
+                  $('.sticky3').css({ 'width': '350px'});
+                  $('.sticky3').css({ 'right': '16em'});
+		      }
+		      else {
+		        $('.sticky3').css('position','static');
+      
+		      }
+
+		    });
+
+		  }
+
+		});
+	</script>
+-->
+   
+        
+        
+<script src="js/jquery.smooth-scroll.js" type="text/javascript"></script>
+<script src="js/jquery.ba-bbq.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+
+      $(document).on('click', 'a[href*="#"]', function() {
+         
+        var slashedHash = '#/' + this.hash.slice(1);
+        if ( this.hash ) {
+
+          if ( slashedHash === location.hash ) {
+            $.smoothScroll({scrollTarget: this.hash});
+          } else {
+            $.bbq.pushState(slashedHash);
+          }
+
+          return false;
+        }
+      });
+
+      $(window).bind('hashchange', function(event) {
+        var tgt = location.hash.replace(/^#\/?/,'');
+        if ( document.getElementById(tgt) ) {
+          $.smoothScroll({scrollTarget: '#' + tgt});
+        }
+      });
+
+      $(window).trigger('hashchange');
+    });      
+   
+  </script> 
+      
+
+     
+  </body>
+</html>
